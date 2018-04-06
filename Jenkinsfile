@@ -1,5 +1,5 @@
 node {
     stage ('Build') {
-        	echo 'Hello from Pipeline'
+        sh "echo 'shell scripts to build project...'"
     }
 }
