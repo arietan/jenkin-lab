@@ -1,3 +1,5 @@
 node {
-    echo 'Hello from Pipeline'
+    stage ('Build') {
+        	echo 'Hello from Pipeline'
+    }
 }
