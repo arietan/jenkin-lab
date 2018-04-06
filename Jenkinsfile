@@ -1,7 +1,9 @@
-node {
-    stage ('Build') {
-        steps {
-                echo "Hello Jenkin Pipeline!"
+pipeline {
+    stages {
+        stage("first stage") {
+            steps {
+                echo "Hello Jenkin pipeline!"
             }
+        }
     }
 }
