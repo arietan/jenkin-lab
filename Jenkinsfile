@@ -1,5 +1,7 @@
 node {
     stage ('Build') {
-        sh "echo 'shell scripts to build project...'"
+        steps {
+                echo "Hello Jenkin Pipeline!"
+            }
     }
 }
