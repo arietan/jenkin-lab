@@ -14,7 +14,7 @@ pipeline {
     }
     stage('Upload to S3') {
     	steps {
-    		echo 'Upload to S3'
+    		sh '/usr/local/bin/aws s3 cp *.zip s3://sia-training-jenkin-integration-bucket/ --profile sia-training'
     	}
     }
   }
