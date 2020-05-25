@@ -1,11 +1,21 @@
 pipeline {
   agent any
   stages {
-    stage('first stage') {
+    stage('Clone repo') {
       steps {
         git poll: true, url: 'https://github.com/arietan/jenkin-lab'
-        echo 'Hello Jenkin pipeline!'
       }
+    },
+    stage('Package') {
+      steps {
+      	sh 'chmod +x package.sh'
+        sh './package.sh'
+      }
+    },
+    stage('Upload to S3') {
+    	steps {
+    		echo 'Upload to S3'
+    	}
     }
   }
 }
